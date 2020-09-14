@@ -46,3 +46,15 @@ ul.main-nav li {
 .nav-links:hover {
   background-color: #009595;
 }
+
+main.quiz {
+  background: white;
+}
+
+.quiz article {
+  padding: 2rem 3rem;
+}
+
+p.question {
+  font-size: 1.7rem;
+}
