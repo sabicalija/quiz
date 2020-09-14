@@ -8,8 +8,6 @@
   </head>
   <body>
     <div id="#app">
-      <!-- https://www.w3schools.com/html/html5_semantic_elements.asp -->
-      <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning -->
       <header>
         <nav class="navbar">
           <ul class="main-nav">
@@ -20,7 +18,98 @@
           </ul>
         </nav>
       </header>
-      <main></main>
+      <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning -->
+      <main class="quiz">
+        <article>
+          <header>
+            <div><span>ID</span><span>21</span></div>
+            <div><span>Category</span><span>Linux</span></div>
+            <div><span>Difficulty</span><span>Easy</span></div>
+          </header>
+          <form action="" method="get">
+            <fieldset>
+              <legend>
+                Which of the following is a text editor that can be used in command mode to edit files on a Linux
+                system?
+              </legend>
+              <div>
+                <input type="radio" name="question" />
+                <label for="">vi or vim</label>
+              </div>
+              <div>
+                <input type="radio" name="question" />
+                <label for="">lsof</label>
+              </div>
+              <div>
+                <input type="radio" name="question" />
+                <label for="">open</label>
+              </div>
+              <div>
+                <input type="radio" name="question" />
+                <label for="">edit</label>
+              </div>
+            </fieldset>
+            <div>
+              <input type="submit" />
+            </div>
+          </form>
+          <footer>
+            <div><span>Tags:</span><span>Linux</span></div>
+          </footer>
+        </article>
+        <article>
+          <header>
+            <div><span>ID</span><span>677</span></div>
+            <div><span>Category</span><span>Linux</span></div>
+            <div><span>Difficulty</span><span>Easy</span></div>
+          </header>
+          <form action="" method="get">
+            <fieldset>
+              <legend>
+                The default working directory is always /root. This directory is kept only for the root user and no
+                other.
+              </legend>
+              <div>
+                <input type="checkbox" name="question" />
+                <label for="">/root</label>
+              </div>
+              <div>
+                <input type="checkbox" name="question" />
+                <label for="">Doesn't have one</label>
+              </div>
+              <div>
+                <input type="checkbox" name="question" />
+                <label for="">/usr/admin</label>
+              </div>
+              <div>
+                <input type="checkbox" name="question" />
+                <label for="">/administrator</label>
+              </div>
+              <div>
+                <input type="checkbox" name="question" />
+                <label for="">/admin</label>
+              </div>
+              <div>
+                <input type="checkbox" name="question" />
+                <label for="">/home/root</label>
+              </div>
+            </fieldset>
+            <div>
+              <input type="submit" />
+            </div>
+          </form>
+          <footer>
+            <div>
+              <h1>Explanation</h1>
+              <p>
+                The default working directory is always /root. This directory is kept only for the root user and no
+                other.
+              </p>
+            </div>
+            <div><span>Tags:</span><span>BASH</span><span>Linux</span></div>
+          </footer>
+        </article>
+      </main>
       <footer></footer>
     </div>
     <script src="index.js"></script>
