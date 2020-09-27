@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./assets/fontawesome-5.14.0/css/all.css" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="#app">
+      <header>
+        <nav class="navbar">
+          <ul class="main-nav">
+            <li><a href="./" class="nav-links">Demo</a></li>
+            <li><a href="./game.html" class="nav-links">Game</a></li>
+            <li><a href="./highscores.html" class="nav-links">Highscores</a></li>
+            <li><a href="./about.html" class="nav-links">About</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="quiz">
+        <div class="api">
+          <!-- <label for="api-token">API Token</label> -->
+          <input id="api-token" type="password" placeholder="Enter API Token" />
+          <i class="far fa-eye fa-eye-slash" id="api-token-toggle"></i>
+          <input type="submit" value="Save" />
+          <input type="submit" value="Delete" />
+        </div>
+        <div class="action">
+          <div class="settings">
+            <select name="difficulty" id="settings-category">
+              <option value="default">Any Category</option>
+              <option value="linux">Linux</option>
+              <option value="bash">Bash</option>
+              <option value="uncategorized">Uncategorized</option>
+              <option value="docker">Docker</option>
+              <option value="sql">SQL</option>
+              <option value="cms">CMS</option>
+              <option value="code">Code</option>
+              <option value="devops">DevOps</option>
+            </select>
+            <select name="category" id="settings-difficulty">
+              <option value="default">Any Difficulty</option>
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+        </div>
+        <article></article>
+      </main>
+      <footer></footer>
+    </div>
+    <script src="common.js"></script>
+  </body>
+</html>
