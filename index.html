@@ -4,114 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./assets/fontawesome-5.14.0/css/all.css" />
+    <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
     <div id="#app">
       <header>
         <nav class="navbar">
           <ul class="main-nav">
-            <li><a href="/demo.html" class="nav-links">Demo</a></li>
-            <li><a href="/game.html" class="nav-links">Game</a></li>
-            <li><a href="/highscores.html" class="nav-links">Highscores</a></li>
-            <li><a href="/about.html" class="nav-links">About</a></li>
+            <li><a href="./" class="nav-links">Demo</a></li>
+            <li><a href="./game.html" class="nav-links">Game</a></li>
+            <li><a href="./highscores.html" class="nav-links">Highscores</a></li>
+            <li><a href="./about.html" class="nav-links">About</a></li>
           </ul>
         </nav>
       </header>
-      <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning -->
       <main class="quiz">
-        <article>
-          <header>
-            <div><span>ID</span><span>21</span></div>
-            <div><span>Category</span><span>Linux</span></div>
-            <div><span>Difficulty</span><span>Easy</span></div>
-          </header>
-          <form action="" method="get">
-            <fieldset>
-              <legend>
-                Which of the following is a text editor that can be used in command mode to edit files on a Linux
-                system?
-              </legend>
-              <div>
-                <input type="radio" name="question" />
-                <label for="">vi or vim</label>
-              </div>
-              <div>
-                <input type="radio" name="question" />
-                <label for="">lsof</label>
-              </div>
-              <div>
-                <input type="radio" name="question" />
-                <label for="">open</label>
-              </div>
-              <div>
-                <input type="radio" name="question" />
-                <label for="">edit</label>
-              </div>
-            </fieldset>
-            <div>
-              <input type="submit" />
-            </div>
-          </form>
-          <footer>
-            <div><span>Tags:</span><span>Linux</span></div>
-          </footer>
-        </article>
-        <article>
-          <header>
-            <div><span>ID</span><span>677</span></div>
-            <div><span>Category</span><span>Linux</span></div>
-            <div><span>Difficulty</span><span>Easy</span></div>
-          </header>
-          <form action="" method="get">
-            <fieldset>
-              <legend>
-                The default working directory is always /root. This directory is kept only for the root user and no
-                other.
-              </legend>
-              <div>
-                <input type="checkbox" name="question" />
-                <label for="">/root</label>
-              </div>
-              <div>
-                <input type="checkbox" name="question" />
-                <label for="">Doesn't have one</label>
-              </div>
-              <div>
-                <input type="checkbox" name="question" />
-                <label for="">/usr/admin</label>
-              </div>
-              <div>
-                <input type="checkbox" name="question" />
-                <label for="">/administrator</label>
-              </div>
-              <div>
-                <input type="checkbox" name="question" />
-                <label for="">/admin</label>
-              </div>
-              <div>
-                <input type="checkbox" name="question" />
-                <label for="">/home/root</label>
-              </div>
-            </fieldset>
-            <div>
-              <input type="submit" />
-            </div>
-          </form>
-          <footer>
-            <div>
-              <h1>Explanation</h1>
-              <p>
-                The default working directory is always /root. This directory is kept only for the root user and no
-                other.
-              </p>
-            </div>
-            <div><span>Tags:</span><span>BASH</span><span>Linux</span></div>
-          </footer>
-        </article>
+        <div class="api">
+          <!-- <label for="api-token">API Token</label> -->
+          <input id="api-token" type="password" placeholder="Enter API Token" />
+          <i class="far fa-eye fa-eye-slash" id="api-token-toggle"></i>
+          <input type="submit" value="Save" />
+          <input type="submit" value="Delete" />
+        </div>
+        <div class="action">
+          <div class="settings">
+            <select name="difficulty" id="settings-category">
+              <option value="default">Any Category</option>
+              <option value="linux">Linux</option>
+              <option value="bash">Bash</option>
+              <option value="uncategorized">Uncategorized</option>
+              <option value="docker">Docker</option>
+              <option value="sql">SQL</option>
+              <option value="cms">CMS</option>
+              <option value="code">Code</option>
+              <option value="devops">DevOps</option>
+            </select>
+            <select name="category" id="settings-difficulty">
+              <option value="default">Any Difficulty</option>
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+          <button id="quiz-new-question">New question</button>
+        </div>
+        <article></article>
       </main>
       <footer></footer>
     </div>
+    <script src="common.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
