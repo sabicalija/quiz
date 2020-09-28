@@ -1,0 +1,177 @@
+/* Game */
+main.quiz > article {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+main.quiz > article > header {
+  display: flex;
+  flex-flow: column nowrap;
+  /* background-color: var(--theme-color-soft); */
+  box-shadow: var(--theme-color-soft-box-shadow);
+  border: 1px solid var(--theme-color-soft);
+  color: var(--theme-color-soft);
+  margin-bottom: 2rem;
+  background-color: var(--theme-color-soft-lighter);
+}
+
+main.quiz > article > header > div {
+  display: flex;
+  flex-flow: row nowrap;
+  /* justify-content: space-between; */
+  padding: 0.25rem 0.5rem;
+  font-size: var(--font-size-main);
+}
+
+main.quiz > article > header > div > span:first-child {
+  min-width: 15%;
+}
+
+main.quiz > article > header > div > span:not(:first-child) {
+  /* color: var(--theme-color-soft); */
+  color: black;
+}
+
+main.quiz > article > form {
+  margin-bottom: 2rem;
+}
+
+main.quiz > article > form > fieldset {
+  border-color: var(--theme-color-main);
+  margin-bottom: 1.5rem;
+  padding: 0;
+}
+
+main.quiz > article > form > fieldset > legend {
+  font-size: var(--font-size-bigger);
+  border: 0.25rem solid var(--theme-color-accent);
+  /* color: var(--theme-color-accent-fg);
+  background-color: var(--theme-color-light); */
+  padding: 1.5rem;
+  margin: 0rem auto 1rem;
+  border-radius: 1rem;
+  width: calc(100% - 6rem);
+}
+
+main.quiz > article > form > fieldset > div.answer {
+  font-size: var(--font-size-big);
+  width: calc(100% - 8rem);
+  margin: 0 auto 0.5rem 3rem;
+}
+
+main.quiz > article > form > fieldset > div.answer > input {
+  display: none;
+  /* visibility: hidden; */
+}
+
+main.quiz > article > form > fieldset > div.answer > label {
+  cursor: pointer;
+  display: inline-block;
+  width: calc(100% - 1rem);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  border: 2px solid var(--theme-color-accent);
+}
+
+main.quiz > article > form > fieldset > div.answer > input:checked + label {
+  background: var(--theme-color-main);
+  color: var(--theme-color-main-fg);
+}
+
+main.quiz > article > form > fieldset > div.answer > input[type="checkbox"] + label {
+  border-radius: 0;
+}
+
+i:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus,
+.btn:focus,
+main.quiz > article > form > fieldset > div.answer > label:focus {
+  /* border: 5px solid var(--theme-color-light); */
+  outline: 5px solid var(--theme-color-light);
+  /* box-shadow: 0 0 0 5px var(--theme-color-light); */
+}
+
+main.quiz > article > form > div {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+main.quiz > article > form > div > input[type="submit"] {
+  /* width: calc(100% - 0.5rem); */
+  /* margin: auto; */
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: var(--font-size-big);
+}
+
+main.quiz > article > footer {
+  margin-bottom: 1rem;
+  background-color: var(--theme-color-soft-lighter);
+  border-radius: 0.25rem;
+  border: 0.25px solid var(--theme-color-soft-light);
+  padding: 1rem;
+}
+
+main.quiz > article > footer > div > span {
+  font-size: var(--font-size-main);
+}
+
+main.quiz > article > footer > div > span:not(:first-child) {
+  padding: 0.25rem 0.5rem;
+  margin-left: 0.5rem;
+  color: var(--theme-color-accent-fg);
+  background-color: var(--theme-color-accent);
+  box-shadow: var(--theme-color-accent-box-shadow);
+  border-radius: 0.25rem;
+}
+
+/* main.quiz > div.round {
+  border: 2px solid var(--theme-color-accent);
+  border-radius: 0.5rem;
+} */
+
+main.quiz > div.round {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease-in;
+}
+
+main.quiz > div.round.animate {
+  visibility: visible;
+  opacity: 1;
+  animation: 0.5s ease-in 0s move;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(20px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+main.quiz > div.round.success {
+  border: 4px solid green;
+  background-color: rgba(0, 255, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+main.quiz > div.round.failure {
+  border: 4px solid red;
+  background-color: rgba(255, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+main.quiz > div.round > p {
+  padding: 0.5rem 1rem;
+  font-size: var(--font-size-big);
+}
+
+@media screen and (max-width: 850px) {
+  main.quiz > article > header > div > span:first-child {
+    min-width: 45%;
+  }
+}

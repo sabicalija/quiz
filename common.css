@@ -1,0 +1,238 @@
+:root {
+  --theme-color-main: teal;
+  --theme-color-main-fg: white;
+  --theme-color-main-box-shadow: 1px 1px 3px 0 rgb(0, 77, 77);
+  --theme-color-accent: rgb(0, 77, 77);
+  --theme-color-accent-fg: white;
+  --theme-color-accent-box-shadow: 1px 1px 3px rgb(0, 43, 43);
+  --theme-color-light: rgb(0, 179, 179);
+  --theme-color-light-fg: black;
+  --theme-color-soft: rgb(128, 128, 128);
+  --theme-color-soft-fg: black;
+  --theme-color-soft-box-shadow: 1px 1px 3px rgb(100, 100, 100);
+  --theme-color-soft-light: rgb(192, 192, 192);
+  --theme-color-soft-lighter: rgb(240, 240, 240);
+  --font-size-bigger: 2.8rem;
+  --font-size-big: 2rem;
+  --font-size-main: 1.4rem;
+}
+
+body,
+#app {
+  padding: 0;
+  margin: 0;
+  font-family: "Ubuntu Mono", "Ubuntu", "Courier New", Courier, monospace;
+}
+
+body {
+  /* background-color: #c0ffff; */
+  padding: 0 4rem;
+}
+
+/* Navigation */
+.navbar {
+  margin-top: 1.5rem;
+}
+
+ul.main-nav {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  margin-top: 1rem;
+  justify-content: space-between;
+  padding: 0;
+}
+
+select.main-nav-dropdown {
+  display: none;
+  width: 100%;
+  line-height: var(--font-size-main);
+  font-size: var(--font-size-main);
+  padding: 0.5rem 1rem;
+  background-color: var(--theme-color-main);
+  color: var(--theme-color-main-fg);
+  border-radius: 0.25rem;
+  box-shadow: var(--theme-color-main-box-shadow);
+  border: none;
+  margin-bottom: 1rem;
+}
+
+ul.main-nav > li {
+  list-style-type: none;
+  background-color: var(--theme-color-accent);
+  box-shadow: var(--theme-color-accent-box-shadow);
+  margin-right: 1rem;
+  padding: 14px 32px;
+  flex-grow: 1;
+}
+
+ul.main-nav > li:not(.active):hover {
+  background-color: var(--theme-color-accent);
+}
+
+ul.main-nav > li:not(.active) {
+  background-color: var(--theme-color-main);
+}
+
+ul.main-nav li:last-child {
+  margin-right: 0;
+}
+
+.nav-links {
+  text-decoration: none;
+  font-size: var(--font-size-big);
+  font-weight: 600;
+  color: var(--theme-color-main-fg);
+}
+
+/* Main */
+main.quiz {
+  background: white;
+  padding: 2rem 0;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/* API Token */
+div.api {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+div.api > * {
+  flex-grow: 1;
+}
+
+div.api > .input {
+  flex-grow: 12;
+}
+
+div.api > .btn {
+  border-radius: 0;
+}
+
+div.api > .btn:last-child {
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+#api-token {
+  width: calc(100% - 2rem);
+}
+
+div.api > .input > i {
+  margin-top: 0.5rem;
+  margin-left: -45px;
+  color: var(--theme-color-accent);
+  cursor: pointer;
+}
+
+/* Common */
+div.action,
+div.api {
+  margin-bottom: 1.5rem;
+}
+
+div.action {
+  margin-bottom: 2rem;
+}
+
+#settings-category,
+#settings-difficulty,
+#quiz-new-question,
+#quiz-start-game,
+div.api > input[type="submit"],
+#api-token {
+  font-size: 1.4rem;
+  line-height: 1.4;
+  padding: 0.5rem 1rem;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: var(--theme-color-main);
+  color: var(--theme-color-main-fg);
+  box-shadow: var(--theme-color-main-box-shadow);
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.btn:hover {
+  background-color: var(--theme-color-accent);
+  color: var(--theme-color-accent-fg);
+  box-shadow: var(--theme-color-accent-box-shadow);
+}
+
+/* Settings */
+div.action {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+div.action > .settings {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 0.5rem;
+}
+
+div.action > .settings > .setting {
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+div.action > .settings > .setting > label {
+  font-size: var(--font-size-main);
+  line-height: var(--font-size-main);
+  padding: 1rem 1rem;
+  /* text-align: center; */
+  vertical-align: center;
+  flex-basis: 10rem;
+}
+
+div.action > .settings > .setting > select {
+  width: 100%;
+}
+
+@media screen and (max-width: 850px) {
+  :root {
+    --font-size-bigger: 2rem;
+    --font-size-big: 1.6rem;
+    --font-size-main: 1.2rem;
+  }
+
+  body {
+    /* background-color: #c0ffff; */
+    padding: 0 2rem;
+  }
+
+  ul.main-nav {
+    display: none;
+  }
+
+  select.main-nav-dropdown {
+    display: unset;
+  }
+
+  div.api {
+    flex-flow: column nowrap;
+  }
+
+  #api-token {
+    width: calc(100% - 2.2rem - 1.5rem);
+    padding-right: calc(1rem + 1.5rem);
+    /* width: calc(100% - 2rem - 36px); */
+  }
+
+  div.api > .input > i {
+    margin-top: 0.5rem;
+    margin-left: -30px;
+    color: var(--theme-color-accent);
+    cursor: pointer;
+  }
+
+  div.api .btn,
+  div.api .btn:last-child {
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+  }
+}
