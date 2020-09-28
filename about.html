@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz</title>
     <link rel="stylesheet" href="./assets/fontawesome-5.14.0/css/all.css" />
+    <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./question.css" />
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
@@ -17,12 +19,16 @@
             <li><a href="./highscores.html" class="nav-links">Highscores</a></li>
             <li><a href="./about.html" class="nav-links">About</a></li>
           </ul>
+          <select class="main-nav-dropdown" name="page" id="nav-dropdown">
+            <option value="./">Demo</option>
+            <option value="./game.html">Game</option>
+            <option value="./highscores.html">Highscores</option>
+            <option value="./about.html">About</option>
+          </select>
         </nav>
       </header>
       <main class="quiz">
-        <article>
-          <h1>About</h1>
-        </article>
+        <article></article>
       </main>
       <footer></footer>
     </div>
